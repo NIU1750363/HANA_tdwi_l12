@@ -1,0 +1,24 @@
+#container{
+    display: grid;
+    grid-template-areas:
+        'header header';
+    background-color: rgb(243, 206, 211);
+}
+
+
+#header{
+    grid-area: header;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+#logo-img{
+    width: 100px;
+}
+
+#header-textos{
+    text-align: center;
+    flex-grow: 1;
+}
