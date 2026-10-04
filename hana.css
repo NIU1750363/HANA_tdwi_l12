@@ -1,24 +1,79 @@
 #container{
-    display: grid;
-    grid-template-areas:
-        'header header';
-    background-color: rgb(243, 206, 211);
+    display: flex;  /*Converteix el contenidor en una caixa flexible*/
+    flex-direction: column;  /*Ordena els elements de dalt a baix en columnes*/
 }
 
-
 #header{
-    grid-area: header;
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
-    padding: 10px 20px;
+    display: flex; /*Posa els elements de la capçelera de costat*/
+    text-align: center; /*Centra el text*/
+    justify-content: space-between; /* Separa al màxim el logo (esquerra) i el text (dreta o centre)*/
+    padding: 5px 15px; /* afegeix marge interior per a que no toqui les vores */
+    background-color: rgb(243, 206, 211); /* color de fons*/
 }
 
 #logo-img{
-    width: 100px;
+    width: 100px; /*amplada de la imatge*/
+}
+
+#inici-sessio{
+    width: 75px; /*amplada de la imatge*/
+    height: 75px; /*alçada de la imatge*/
 }
 
 #header-textos{
-    text-align: center;
-    flex-grow: 1;
+    text-align: center; /*centra el text del titol*/
+    flex-grow: 1; /* fa que aquest bloc ocupi tot l'espai disponible entre el logo i el menú*/
 }
+
+#slogan{
+    background-image: url('fondo.jpg'); /*imatge de fondo*/
+    height: 430px; /*alçada fixa per a que es pugui veure la imatge*/
+    background-size: cover; /*fa que la imatge cobreixi tot l'espai del div*/
+    background-repeat: no-repeat; /*evita que la imatge es repeteixi*/
+    
+}
+
+#menu{
+    display: flex; /*fa que les seccions estiguin de costat*/
+    justify-content: space-between; /*reparteix l'espai entre ells*/
+    gap: 10px; /*espai entre seccions*/
+    padding: 10px; /* marge interior per a que no toqui les vores*/
+    overflow-x: auto; /*barra desplaçable si hi ha masses seccions*/
+}
+
+#plantes-interior, #plantes-exterior, #boquets, #Productes-i-eines {
+    height: 35px; /*mida fixa alçada*/
+    width: 35px; /*mida fixa amplada*/
+    background-size: cover; /* Fa que la foto de fons s'adapti a la caixa */
+    background-position: center; /* Centra la imatge perquè es vegi el millor angle */
+    background-repeat: no-repeat; /*evita que la imatge es repeteixi*/
+    display: flex; /* Permet centrar el text de dins de la caixa */
+    justify-content: center; /* Centra horitzontalment el títol de la secció */
+    align-items: center; /* Centra verticalment el títol de la secció */
+    color: white; /* Posa el text en color blanc */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Afegeix sombra al text per llegir-lo millor sobre la foto */
+    border-radius: 8px; /* Arrodoneix les cantonades de les caixes */
+    text-align: center; /* Assegura que el text estigui centrat */
+    padding:10%; /* Marge intern  */
+}
+
+#plantes-interior{
+    background-image: url('interior.jpg');
+}
+#plantes-exterior{
+    background-image: url('exterior.jpg');
+}
+#boquets{
+    background-image: url('boquets.jpg');
+}
+
+#Productes-i-eines{
+    background-image: url('productes-i-eines.jpg');
+}
+
+#registre {
+    padding: 20px; /* espai intern al voltant del formulari */
+    margin-top: 20px; /* Separa aquesta secció de tot el que hi ha a sobre */
+}
+
+
