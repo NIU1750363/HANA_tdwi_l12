@@ -71,4 +71,14 @@
     margin-top: 20px;
 }
 
+#resultat-planta {
+    text-align: center; /* Centra el text del resultat */
+    font-size: 18px; /* Augmenta la mida de la lletra per fer-la més llegible */
+    font-weight: bold; /* Fa que el text sigui en negreta per destacar-lo */
+    margin: 15px 0; /* Afegeix marge a dalt i a baix per separar-lo del select i altres elements */
+    color: #333; /* Color del text */
+}
 
+#titol-interior {
+    cursor: pointer; /* Fa que aparegui la maneta del ratolí en passar per damunt del títol */
+}

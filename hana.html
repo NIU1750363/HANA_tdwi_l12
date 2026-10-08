@@ -19,8 +19,9 @@
             <p>HANA: Bringing Nature to Your Home</p>
         </div>
         <div id="menu">
-            <section id="plantes-interior">
-                <h1>Plantes d'interior</h1>
+           <section id="plantes-interior">
+                <!-- Afegim id="titol-interior" per poder clicar-hi -->
+                <h1 id="titol-interior" onclick="toggleSelectInterior()">Plantes d'interior</h1> <!--la unica seccio que te un menu desplegable (de moment)*-->
             </section>
             <section id="plantes-exterior">
                 <h1>Plantes d'exterior</h1>
@@ -34,6 +35,17 @@
         </div>
 
     </div>
+
+    <!--select amagat de moment amb style="display:none;" -->
+    <select id="plantes-interior-select" onchange="showPlantesInterior()" style="display: none;">
+        <option value="">Select a plant</option>
+        <option value="planta1">Orquidea</option>
+        <option value="planta2">Cactus</option>
+        <option value="planta3">Bonsai</option>
+    </select>
+
+    <div id="resultat-planta"></div>
+
     <section id="registre">
         <header>
             <h2> Inici Sessió </h2>
